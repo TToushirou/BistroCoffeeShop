@@ -230,8 +230,8 @@
         }
     }
 
-    // Mid Sized Tablet 
-    @include breakpoint(medium) {
+    // small Sized Tablet 
+    @include breakpoint(small) {
         &__imgMobile {
             display: none;
         }
@@ -380,6 +380,11 @@
             display: none;
         }
     }
+    // Tablet Small Laptop
+    @include breakpoint(medium){
+        grid-template-columns: 1fr 1fr !important;
+    }
+
     // Desktop
     @include breakpoint(large) {
         grid-template-columns: 1fr 1fr !important;
@@ -509,10 +514,14 @@
     border-radius: rem(20) rem(20) 0 0;
 
     @include breakpoint-down(small) {
-
         img {
-            width: rem(70) !important;
+            width: rem(30) !important;
             height: auto;
+        }
+
+        .contact-info {
+
+            display: none;
         }
 
         
