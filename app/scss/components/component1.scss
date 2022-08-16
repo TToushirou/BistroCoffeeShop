@@ -213,6 +213,7 @@
         width: 100%;
         background-image: none;
 
+
         &__wrapper {
             display: none;
         }
@@ -220,6 +221,14 @@
         &__imgMobile {
             transform: translate(1100%, -2000%);
 
+        }
+
+        .mb-img {
+            position: relative;
+            width: rem(270);
+            margin-left: auto;
+            margin-right: auto;
+            transform: translate(9%, -20%);
         }
 
         .img {
@@ -232,6 +241,9 @@
 
     // small Sized Tablet 
     @include breakpoint(small) {
+
+
+
         &__imgMobile {
             display: none;
         }
@@ -248,6 +260,10 @@
             .img {
                 width: rem(450);
                 height: auto;
+            }
+
+            .mb-img {
+                display: none;
             }
         }
 
@@ -525,7 +541,9 @@
 
     @include breakpoint-down(small) {
         position: absolute;
+        top: rem(665);
         height: 25vh;
+        width: 100%;
 
         img {
             width: rem(30) !important;
@@ -535,19 +553,59 @@
         .contact-info {
 
             .addr {
-                font-size: rem(10);
+                font-size: rem(16);
             }
 
             .email {
-                font-size: rem(10);
+                display: none;
             }
 
             .phone {
-                font-size: rem(10);
+                display: none;
+            }
+
+        }
+
+        .img-holder {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+
+
+            .mb-footer {
+                position: absolute;
+                color: var(--coffee);
+                width: rem(140) !important;
+                height: rem(140);
+                transform: translate(-35%, -45%);
+            }
+
+
+        }
+
+        .social-links {
+            grid-template-columns: rem(100) !important;
+
+
+            .linkedin {
+                display: none;
+            }
+ 
+        }
+
+
+        
+    }
+
+    @include breakpoint(small) {
+        
+        .img-holder {
+            .mb-footer {
+                display: none;
             }
         }
 
-        
     }
 
     @include breakpoint(large) {
