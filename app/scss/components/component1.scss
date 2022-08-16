@@ -255,10 +255,19 @@
             display: none;
         }
 
+
+
         &__img {
             width: rem(375);
-            height: auto;
-            transform: translate(55%, -33%);
+            margin-left: auto;
+            margin-right: auto;
+            transform: translate(-5%, -30%);
+
+
+            .img {
+                width: rem(450);
+                height: auto;
+            }
         }
 
         &__wrapper {
@@ -448,6 +457,9 @@
         
         .img-wrapper {
             margin: rem(20);
+            margin-left: auto;
+            margin-right: auto;
+            width: rem(250);
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -470,8 +482,13 @@
 
 
             &__org {
+                max-width: rem(280);
                 position: absolute;
-                padding: rem(27) rem(80) rem(8) rem(20);
+                margin-left: 0;
+                margin-right: 0;
+                left: 0;
+                right: 0;
+                transform: translate(145%, 155%);
                 font-family: var(--font-body);
             }
         }
@@ -492,6 +509,8 @@
             width: rem(70) !important;
             height: auto;
         }
+
+        
     }
     
     .social-links {

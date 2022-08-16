@@ -10,3 +10,9 @@
 		transform: translate(0, 0);
 	}
 }
+
+body {
+	@include breakpoint(medium) {
+		min-width: rem(786);
+	}
+}
