@@ -12,6 +12,11 @@
 }
 
 body {
+
+	@include breakpoint-down(small) {
+		height: 100vh;
+
+	}
 	@include breakpoint(small) {
 		min-width: rem(700);
 	}

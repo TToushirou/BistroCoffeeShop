@@ -302,6 +302,14 @@
 
     }
 
+
+    // Laptop Tablet
+    @include breakpoint(medium) {
+        
+    }
+
+
+    // Desktop
     @include breakpoint(large) {
         background-image: url(/images/coffee-shop-1080.jpg); 
     
@@ -374,10 +382,12 @@
     @include breakpoint-down(small) {
         .left-content {
             display: none;
+            transform: translate(-10000%, -10000%);
         }
 
         .right-content {
             display: none;
+            transform: translate(-10000%, -10000%);
         }
     }
     // Tablet Small Laptop
@@ -514,6 +524,9 @@
     border-radius: rem(20) rem(20) 0 0;
 
     @include breakpoint-down(small) {
+        position: absolute;
+        height: 25vh;
+
         img {
             width: rem(30) !important;
             height: auto;
@@ -521,7 +534,17 @@
 
         .contact-info {
 
-            display: none;
+            .addr {
+                font-size: rem(10);
+            }
+
+            .email {
+                font-size: rem(10);
+            }
+
+            .phone {
+                font-size: rem(10);
+            }
         }
 
         
