@@ -384,14 +384,23 @@
     @include breakpoint(large) {
         grid-template-columns: 1fr 1fr !important;
 
-        .right-content {
 
-            .img-wrapper {
+        .left-content {
 
-                &__org {
-                    transform: translate(327%, 145%) !important;
-                }
+            &--header {
+
+                font-size: rem(40) !important;
+
             }
+
+            &--text {
+
+                font-size: rem(25);
+                line-height: rem(45) !important;
+                padding: rem(50) !important;
+                padding-top: rem(0) !important;
+            }
+
         }
 
 
@@ -457,7 +466,7 @@
         margin: rem(25);
         margin-left: 0;
         
-        .img-wrapper {
+        .img-wrapper2 {
             margin: rem(20);
             margin-left: auto;
             margin-right: auto;
@@ -476,7 +485,6 @@
             }
 
 
-            
             &__geo {
                 position: absolute;
                 transform: translate(200%, -20%);
@@ -484,18 +492,13 @@
 
 
             &__org {
-                max-width: rem(280);
                 position: absolute;
                 margin-left: 0;
                 margin-right: 0;
-                left: 0;
-                right: 0;
-                transform: translate(145%, 155%);
+                padding: rem(22) rem(44) 0 0;
                 font-family: var(--font-body);
             }
         }
-        
-
         
     }
 }
