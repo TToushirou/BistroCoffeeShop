@@ -380,6 +380,10 @@
         .left-content {
             display: none;
         }
+
+        .right-content {
+            display: none;
+        }
     }
 
     background-color: var(--mobileBG);
@@ -481,12 +485,23 @@
 .footer-section {
     background-color: var(--brown);
     border-radius: rem(20) rem(20) 0 0;
+
+    @include breakpoint-down(small) {
+
+        img {
+            width: rem(70) !important;
+            height: auto;
+        }
+    }
     
     .social-links {
+        padding: 0;
+        width: auto;
         margin-top: 0;
         list-style: none;
         display: grid;
-        grid-template-columns: rem(20) rem(20) rem(20) rem(20);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
     }
 
     .contact-info {
@@ -496,5 +511,18 @@
         color: var(--white);
         font-family: var(--font-body);
         letter-spacing: rem(2);
+    }
+
+    .linkedin {
+        
+    }
+
+    li {
+        margin-top: rem(15);
+    }
+
+    img {
+        width: rem(130);
+        height: auto;
     }
 }
