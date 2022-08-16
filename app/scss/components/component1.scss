@@ -7,20 +7,17 @@
     
     // Hide Nav at Larger Screen Size
     @include breakpoint(large) {
-        min-width: 100%;
-        background-size: cover;
-        background-position: center;
 
-        .navbar-collapse {
-            justify-content: flex-end;
+        .navbar {
+            justify-content: flex-end !important;
         }
 
         .nav-links {
-            min-width: 30%;
             list-style: none;
             display: flex;
             flex-direction: row !important;
             margin-bottom: 0;
+            margin-top: rem(35) !important;
 
             &__li {
                 display: flex;
@@ -30,23 +27,20 @@
 
             a {
                 text-decoration: none;
-                color: var(--verydarkdesaturatedblue);
+                color: var(--coffee);
                 font-family: var(--font-body);
+                font-size: rem(25);
+                text-align: center;
+                letter-spacing: rem(2);
+                transition-duration: 0.4s;
             }
 
-            button {
-                padding: 0.75rem 1.5rem;
-                background-color: white !important;
-                border: none;
-                border-radius: rem(100);
-                cursor: pointer;
+            a:hover {
+                color: var(--white);
             }
 
-            button:hover {
-                transition: ease-in-out 500ms;
-                background-color: rgba(255, 255, 255, 0.5) !important;
-            }
         }
+
 
         .menu-tog {
             visibility: hidden;
@@ -125,19 +119,6 @@
 
         a {
             text-decoration: none;
-        }
-
-        button {
-            padding: 0.75rem 1.5rem;
-            background-color: yellow;
-            border: none;
-            border-radius: rem(100);
-            cursor: pointer;
-        }
-
-        button:hover {
-            transition: ease-in-out 500ms;
-            background-color: rgba(201, 58, 58, 0.89);
         }
     }
 
@@ -241,7 +222,7 @@
 
         }
 
-        &__img {
+        .img {
             transform: translate(-1000%, -1000%) !important;
             width: 0;
             height: 0;
@@ -320,6 +301,11 @@
         }
 
     }
+
+    @include breakpoint(large) {
+        background-image: url(/images/coffee-shop-1080.jpg); 
+    
+    }
 }
 
 // Section Break
@@ -393,6 +379,22 @@
         .right-content {
             display: none;
         }
+    }
+    // Desktop
+    @include breakpoint(large) {
+        grid-template-columns: 1fr 1fr !important;
+
+        .right-content {
+
+            .img-wrapper {
+
+                &__org {
+                    transform: translate(327%, 145%) !important;
+                }
+            }
+        }
+
+
     }
 
     background-color: var(--mobileBG);
@@ -512,6 +514,12 @@
 
         
     }
+
+    @include breakpoint(large) {
+        .contact-info {
+            font-size: rem(26);
+        }
+    }
     
     .social-links {
         padding: 0;
@@ -530,10 +538,6 @@
         color: var(--white);
         font-family: var(--font-body);
         letter-spacing: rem(2);
-    }
-
-    .linkedin {
-        
     }
 
     li {

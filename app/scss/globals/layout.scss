@@ -13,6 +13,6 @@
 
 body {
 	@include breakpoint(medium) {
-		min-width: rem(786);
+		min-width: rem(700);
 	}
 }
