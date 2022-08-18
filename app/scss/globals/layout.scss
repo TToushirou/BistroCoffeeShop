@@ -15,9 +15,10 @@ body {
 
 	@include breakpoint-down(small) {
 		height: 100vh;
-
+		max-width: rem(450);
 	}
 	@include breakpoint(small) {
 		min-width: rem(700);
 	}
+
 }

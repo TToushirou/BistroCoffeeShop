@@ -29,7 +29,7 @@ menuToggle.addEventListener('click', () => {
 		setTimeout(() => {
 			navWrapper.classList.add('active');
 		   
-		}, 300);
+		}, 450);
 	}
 
 	menuToggle.classList.toggle('active');
